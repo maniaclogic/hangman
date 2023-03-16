@@ -1,6 +1,6 @@
 # Hangman
-This is a simple python implementation of the game Hangman played fully in the Terminal.
-It is fully written with TDD. 
+This is a simple python implementation of the game Hangman played in the Terminal.
+It is written with TDD. 
 
 How to use:
 1. Activate your virtualenv.
