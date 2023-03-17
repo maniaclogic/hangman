@@ -22,12 +22,13 @@ def guess_a_letter(letter, word, puzzle):
         return False, puzzle
 
 
-def won(puzzle, word):
+def won(puzzle, word, failures):
     if "_" not in puzzle:
         print("\n################################")
         print("#  🎉 You got it. Congrats! 🎉  #")
         print("################################\n")
         print("The word was: ", word.title())
+        print(f'Solved with {failures}/7 wrong guesses.')
         return True
     else:
         return False

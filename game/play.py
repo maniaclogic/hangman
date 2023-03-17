@@ -17,7 +17,7 @@ def main():
         if success_message:
             print("Correct!")
             print(' '.join(remaining_puzzle))
-            game_over = won(remaining_puzzle, word)
+            game_over = won(remaining_puzzle, word, failures)
         else:
             failures += 1
             failed_guesses.append(player_guess.upper())

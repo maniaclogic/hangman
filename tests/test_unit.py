@@ -23,8 +23,8 @@ def test_should_evaluate_if_letter_is_part_of_word_and_return_remaining_puzzle()
 
 
 def test_should_return_true_when_game_is_won():
-    assert won(["c", "a", "t"], "Cat")
-    assert not won(["j", "_"], "Ja")
+    assert won(["c", "a", "t"], "Cat", 3)
+    assert not won(["j", "_"], "Ja", 2)
 
 
 def test_should_return_true_when_game_is_lost():
