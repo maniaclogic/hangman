@@ -11,9 +11,3 @@ How to use:
 
 ## Preparation:
 ![flowchart for the hangman game decisions made](game/images/Hangman.drawio.png "Flowchart for the decisions made in hangman game")
-
-### Tasking
-
-- Understand setup.py
-- Get word api (https://random-word-api.herokuapp.com/word)
-  - Mock Rest API (https://realpython.com/testing-third-party-apis-with-mocks/)

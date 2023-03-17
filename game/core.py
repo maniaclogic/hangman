@@ -1,3 +1,13 @@
+from urllib.request import urlopen
+import json
+
+
+def get_word():
+    url = "https://random-word-api.herokuapp.com/word"
+    word = json.loads(urlopen(url).read())
+    return word[0]
+
+
 def blanks_for_word(hidden_word):
     return ["_" for i in range(len(hidden_word))]
 
@@ -12,22 +22,23 @@ def guess_a_letter(letter, word, puzzle):
         return False, puzzle
 
 
-def won(puzzle):
+def won(puzzle, word):
     if "_" not in puzzle:
         print("\n################################")
         print("#  🎉 You got it. Congrats! 🎉  #")
         print("################################\n")
+        print("The word was: ", word.title())
         return True
     else:
         return False
 
 
-def lost(failures):
+def lost(failures, word):
     if failures >= 7:
         print("\n###################")
         print("#    GAME OVER    #")
         print("###################\n")
+        print("The word was: ", word.title())
         return True
     else:
         return False
-
