@@ -3,6 +3,16 @@ from hangman_ascii_art import HANGMAN_STAGES
 
 
 def main():
+    print('''
+_                                             
+| |                                            
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
+| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    __/ |                      
+                   |___/   
+                   \n\n\n''')
     game_over = False
     word = get_word()
     puzzle = blanks_for_word(word)
