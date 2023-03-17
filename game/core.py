@@ -10,3 +10,24 @@ def guess_a_letter(letter, word, puzzle):
         return True, puzzle
     else:
         return False, puzzle
+
+
+def won(puzzle):
+    if "_" not in puzzle:
+        print("\n################################")
+        print("#  🎉 You got it. Congrats! 🎉  #")
+        print("################################\n")
+        return True
+    else:
+        return False
+
+
+def lost(failures):
+    if failures >= 7:
+        print("\n###################")
+        print("#    GAME OVER    #")
+        print("###################\n")
+        return True
+    else:
+        return False
+

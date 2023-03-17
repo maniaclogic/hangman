@@ -16,7 +16,17 @@ def test_should_evaluate_if_letter_is_part_of_word_and_return_remaining_puzzle()
     is_not_part_of_word, remaining_puzzle_2 = guess_a_letter('a', "cut", ["_", "_", "_"])
     assert is_not_part_of_word is False
     assert remaining_puzzle_2 == ["_", "_", "_"]
-    #Edge Case
-    occures_twice_in_word, remaining_puzzle_3 = guess_a_letter('t', "test", ["_", "_", "_", "_"])
-    assert occures_twice_in_word is True
+    # Edge Case
+    occurs_twice_in_word, remaining_puzzle_3 = guess_a_letter('t', "test", ["_", "_", "_", "_"])
+    assert occurs_twice_in_word is True
     assert remaining_puzzle_3 == ["t", "_", "_", "t"]
+
+
+def test_should_return_true_when_game_is_won():
+    assert won(["c", "a", "t"])
+    assert not won(["j", "_"])
+
+
+def test_should_return_true_when_game_is_lost():
+    assert lost(7)
+    assert not lost(3)
